@@ -1,0 +1,128 @@
+$fontFamily: Arial, Helvetica, sans-serif;
+$color: #f5f5f5;
+$margin: auto;
+$align: center;
+$opacity: 0.6;
+$boderProperty: solid;
+$borderRadius: 3px;
+$borderSize: 0.5px;
+$display: none;
+$cursor: pointer;
+$fontSize: 200%;
+$textDecoration: none;
+@mixin property($width,$height,$paddingTop,$paddingBot,$paddingLeft,$paddingRight) {
+    width: $width;
+    height: $height;
+    padding-top: $paddingTop;
+    padding-bottom: $paddingBot;
+    padding-left: $paddingLeft;
+    padding-right: $paddingRight;
+}
+
+body {
+    font-family: $fontFamily;
+}
+
+.header {
+    @include property(500px, 50px, 0, 0, 3%, 3%);
+    margin: $margin;
+    color: $color;
+    text-align: $align;
+    $color: #0097a7;
+    background-color: $color;
+}
+
+.header p {
+    font-size: $fontSize;
+    $margin: 0%;
+    margin: $margin;
+    padding-top: 1%;
+}
+
+.body {
+    @include property(500px, 103%, 3%, 3%, 3%, 3%);
+    margin: $margin;
+    $boderProperty: none;
+    border: $boderProperty;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-shadow: 0px 10px 18px 10px #bdbdbd;
+}
+
+b{
+    $color: #00BCD4;
+    color: $color;
+}
+
+::placeholder{
+    opacity: $opacity;
+}
+
+input {
+    border-radius: $borderRadius;
+    border: $borderSize $boderProperty rgba(0, 0, 0, 0.2) ;
+    $fontFamily: FontAwesome;
+    font-family: $fontFamily;
+    margin-bottom: 5%;
+}
+
+.form1 input {
+    @include property(44%, 25px, 3px, 3px, 10px, 0);
+    margin-right: 16px;
+}
+
+.form2 input {
+    $display: block;
+    display: $display;
+    @include property(95%, 25px, 3px, 3px, 10px, 0);
+}
+
+input[type=checkbox]{
+    display: $display;
+}
+
+input[type=checkbox] + label:before{
+    content: "\2714";
+    $color: #03A9F4;
+    $borderSize: 0.1em;
+    border: $borderSize $boderProperty $color;
+    $color: transparent;
+    color: $color;
+    $display: inline-block;
+    display: $display;
+    @include property(1.1em, 1em, 0, 0.2em, 0, 0);
+    $borderRadius: 5px; 
+    border-radius: $borderRadius;
+}
+
+input[type=checkbox]:checked + label:before{
+    $color: #03A9F4;
+    color: $color;
+}
+
+input[type=checkbox] + label{
+    cursor: $cursor;
+    text-align: $align;
+} 
+
+button {
+    $borderRadius: 2px;
+    border-radius: $borderRadius;
+    height: 30px;
+    $align: right;
+    float: $align;
+    $color: #00BCD4;
+    background-color: $color;
+    border: $color;
+    $color: #ffff;
+    color: $color;
+    margin-right: 3%;
+}
+
+a {
+    text-decoration: $textDecoration;
+    $color: #03A9F4;
+    color:  $color;
+}
